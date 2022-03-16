@@ -8,16 +8,25 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
 }
-ul {
-  list-style-type: none;
+
+header {
   display: flex;
   flex-direction: row;
+  background-color: #ceb3c4;
+}
+
+.topnav {
+  display: flex;
+  overflow: hidden;
+  height: 100px;
+  width: 100%;
   justify-content: flex-end;
-  font-size: 25px;
+  align-items: center;
 }
-li {
-  padding: 10px;
-}
+
+/* .dropdown-content {
+  /* float: ; */
+/* } */
 #Coldbrew {
   background-color: #ceb3c4;
   height: 500px;

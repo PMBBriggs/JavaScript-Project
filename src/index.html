@@ -1,62 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Espresso Yourself</title>
-</head>
-<body>
-    <h1>
-        Espresso Yourself
-    </h1>
-<header>
-    <nav>
-        <ul>
-            <li>Food</li>
-            <li>Drinks</li>
-            <li>About Us</li>
-            <li>Locations</li>
-            <li>Cart</li>
-        </ul>
-    </nav>
-</header>
-<div id="Coldbrew">
-    <img src="./assets/Coldbrew.png" alt="Coldbrew Coffee" id="coldbrewPNG">
-    <div>
-       <p>
-           place text here
-           place text here
-           place text here
-           place text here
-           place text here
-           place text here
-           place text here 
-           place text here
-           place text here
-       </p>
-    </div> 
-</div>
-    <div id="Chaitea">
-        <div>
-            <p>
-                place text here
-                place text here
-                place text here
-                place text here
-                place text here
-                place text here
-                place text here 
-                place text here
-                place text here
-            </p>
+  </head>
+  <body>
+    <header>
+      <h1>Espresso Yourself</h1>
+      <div class="topNav">
+        <div class="dropdown">
+          <button class="dropbtn">
+            Drinks
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Coffee</a>
+            <a href="#">Hot Chocolate</a>
+            <a href="#">Teas</a>
+          </div>
         </div>
-        <img src="./assets/Chaitea.png" alt="Chaitea" id="chaiteaPNG">
-<!-- create on-click to take user to different page -->
+        <div class="dropdown">
+          <button class="dropbtn">
+            Food
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Muffins</a>
+            <a href="#">Sandwiches</a>
+            <a href="#">Bagel</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Locations
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Canton, MI</a>
+            <a href="#">Wyandotte, MI</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            About Us
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Mission Statement</a>
+            <a href="#">Our Team</a>
+            <a href="#">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="Coldbrew">
+      <img src="./assets/Coldbrew.png" alt="Coldbrew Coffee" id="coldbrewPNG" />
+      <div>
+        <p>
+          place text here place text here place text here place text here place
+          text here place text here place text here place text here place text
+          here
+        </p>
+      </div>
+    </div>
+    <div id="Chaitea">
+      <div>
+        <p>
+          place text here place text here place text here place text here place
+          text here place text here place text here place text here place text
+          here
+        </p>
+      </div>
+      <img src="./assets/Chaitea.png" alt="Chaitea" id="chaiteaPNG" />
+      <!-- create on-click to take user to different page -->
     </div>
 
-
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
