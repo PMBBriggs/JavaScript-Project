@@ -1,111 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Espresso Yourself</title>
-  </head>
-  <body>
-    <header>
-      <h1>Espresso Yourself</h1>
-      <div class="topNav">
-        <div class="dropdown">
-          <button class="dropbtn">
-            Drinks
+</head>
+<body>
+  <header>
+    <h1>
+          Espresso Yourself
+      </h1>
+  <div class="topnav">
+      <div class="dropdown">
+          <button class="dropbtn">Drinks
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="#">Coffee</a>
-            <a href="#">Hot Chocolate</a>
+            <a href="#">Caffinated</a>
+            <a href="#">NonCaffinated</a>
             <a href="#">Teas</a>
           </div>
         </div>
         <div class="dropdown">
-          <button class="dropbtn">
-            Food
+          <button class="dropbtn">Food
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
             <a href="#">Muffins</a>
-            <a href="#">Sandwiches</a>
-            <a href="#">Bagel</a>
+          
           </div>
         </div>
         <div class="dropdown">
-          <button class="dropbtn">
-            Locations
+          <button class="dropbtn">locations
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
             <a href="#">Canton, MI</a>
-            <a href="#">Wyandotte, MI</a>
+            <a href="#">Grand Rapids, MI</a>
+            <a href="#">Belleville, MI</a>
           </div>
         </div>
         <div class="dropdown">
-          <button class="dropbtn">
-            About Us
+         
+          <button class="dropbtn">About us
             <i class="fa fa-caret-down"></i>
           </button>
-          <div class="dropdown-content">
-            <a href="#">Mission Statement</a>
-            <a href="#">Our Team</a>
-            <a href="#">Contact Us</a>
           </div>
+          <div class="dropdown">
+            <button class="dropbtn" onClick="showCartContainer(event)">Cart
+            </button> 
         </div>
-      </div>
-    </header>
+    </div>
+  </header>
 
-    
 
-    <div id="Coldbrew">
-      <img src="./assets/Coldbrew.png" alt="Coldbrew Coffee" id="coldbrewPNG" />
+<div class="mainPage container">
+  <div id="Coldbrew">
+      <img src="./assets/Coldbrew.png" alt="Coldbrew Coffee" id="coldbrewPNG">
       <div>
-        <p>
-          place text here place text here place text here place text here place
-          text here place text here place text here place text here place text
-          here
-        </p>
+         <p>
+             place text here
+             place text here
+             place text here
+             place text here
+             place text here
+             place text here
+             place text here 
+             place text here
+             place text here
+         </p>
+      </div> 
+  </div>
+      <div id="Chaitea">
+          <div>
+              <p>
+                  place text here
+                  place text here
+                  place text here
+                  place text here
+                  place text here
+                  place text here
+                  place text here 
+                  place text here
+                  place text here
+              </p>
+          </div>
+          <img src="./assets/Chaitea.png" alt="Chaitea" id="chaiteaPNG">
+  <!-- create on-click to take user to different page -->
       </div>
-    </div>
-    <div id="Chaitea">
-      <div>
-        <p>
-          place text here place text here place text here place text here place
-          text here place text here place text here place text here place text
-          here
-        </p>
-      </div>
-      <img src="./assets/Chaitea.png" alt="Chaitea" id="chaiteaPNG" />
-      <!-- create on-click to take user to different page -->
-    </div>
-    <div class = "coffeePage">
-      <div class = "productOne">
-        <div>
-        <p>Name</p>
-        <p>Description</p>
-        <p>Price</p>
-        <button>Add to Cart</button>
-        </div>
-        <img id = "" alt="" srcset="">
-        
-      </div>
-      <div class = "productTwo">
-        <div>
-        <p>Name</p>
-        <p>Description</p>
-        <p>Price</p>
-        <button>Add to Cart</button>
-        </div>
-        <img id = "" alt="" srcset="">
-        
-      </div>
-    
-    </div>
+</div>
 
-    
+
+ <div class="CartContainer container hidden">
+
+        <div class="shoppingCart">
+            <h1 class="Heading">Shopping Cart</h1>
+            <h2 class="Action">Remove all</h2>
+        </div>
+
+        <div class="Cart-Items">
+            <div class=" ">
+                <img src="./assets/Chaitea.png" class="chai" />
+            </div>
+
+            <div class="about">
+                <h3 class="title">Mocha</h3>
+                <h4 class="subtitle">16oz.</h4>
+            </div>
+
+            <form id="myquantityform">
+                <div class="howmany">
+                   <label for="quantity" class="first">Quantity?</label>
+                   <input type="number" min="0"   class="howmanybox" name="quantity">
+               </div>
+            </form>
+            <div class="prices">
+                <div class="amount">$5.49</div>
+                <div class="remove"><u>Remove</u></div>
+            </div>
+      </div>
 
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
