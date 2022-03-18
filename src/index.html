@@ -17,9 +17,9 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="#">Coffee</a>
-            <a href="#">Hot Chocolate</a>
-            <a href="#">Teas</a>
+            <a href="#" id="coffeeDrpDown">Coffee</a>
+            <a href="#" id="hcDrpDown">Hot Chocolate</a>
+            <a href="#" id="teaDrpDown">Teas</a>
           </div>
         </div>
         <div class="dropdown">
@@ -28,9 +28,9 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="#">Muffins</a>
-            <a href="#">Sandwiches</a>
-            <a href="#">Bagel</a>
+            <a href="#" id="muffinDrpDown">Muffins</a>
+            <a href="#" id="sandwichDrpDown">Sandwiches</a>
+            <a href="#" id="bagelDrpDown">Bagel</a>
           </div>
         </div>
         <div class="dropdown">
@@ -58,8 +58,8 @@
     </header>
 
     
-
-    <div id="Coldbrew">
+<div class ="mainPage">
+    <div id="Coldbrew" >
       <img src="./assets/Coldbrew.png" alt="Coldbrew Coffee" id="coldbrewPNG" />
       <div>
         <p>
@@ -80,7 +80,8 @@
       <img src="./assets/Chaitea.png" alt="Chaitea" id="chaiteaPNG" />
       <!-- create on-click to take user to different page -->
     </div>
-    <div class = "coffeePage">
+</div>
+    <div id = "coffeePage" class = "hidden">
       <div class = "coldBrew">
         <div>
         <p>Vanilla Sweet Cream Cold Brew</p>
@@ -91,9 +92,9 @@
         <img id = "" alt="" srcset="">
         
       </div>
-      <div class = "caramelLate">
+      <div class = "caramelLatte">
         <div>
-        <p>Caramel Late</p>
+        <p>Caramel Latte</p>
         <p>Description</p>
         <p>$5.25</p>
         <button>Add to Cart</button>
@@ -102,7 +103,7 @@
         
       </div>
     </div>
-    <div class = "hotChocolatePage">
+    <div id = "hotChocolatePage" class = "hidden">
       <div class = "hotChocolate">
         <div>
         <p>Hot Chocolate</p>
@@ -124,7 +125,7 @@
         
       </div>
     </div>
-    <div class = "teas">
+    <div id = "teaPage" class = "hidden">
       <div class = "chaiTea">
         <div>
         <p>Chai Tea</p>
@@ -146,7 +147,7 @@
         
       </div>
     </div>
-    <div class = "muffins">
+    <div id = "muffinsPage" class = "hidden">
       <div class = "bananaNut">
         <div>
         <p>Banana Nut Muffin</p>
@@ -168,7 +169,7 @@
         
       </div>
     </div>
-    <div class = "sandwiches">
+    <div id = "sandwichPage" class = "hidden">
       <div class = "BaconEgg">
         <div>
         <p>Bacon Egg & Cheese</p>
@@ -190,11 +191,11 @@
         
       </div>
     </div>
-    <div class = "bagels">
+    <div id = "bagelPage" class = "hidden">
       <div class = "saltyBagel">
         <div>
         <p>Sam's Salty Bagel</p>
-        <p>Salty Bagel with veggie cream chease spread.</p>
+        <p>Salty Bagel with veggie cream cheese spread.</p>
         <p>$6.00</p>
         <button>Add to Cart</button>
         </div>
