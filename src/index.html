@@ -18,9 +18,9 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="#">Caffinated</a>
-            <a href="#">NonCaffinated</a>
-            <a href="#">Teas</a>
+            <a href="#" id="coffeeDrpDown">Coffee</a>
+            <a href="#" id="hcDrpDown">Hot Chocolate</a>
+            <a href="#" id="teaDrpDown">Teas</a>
           </div>
         </div>
         <div class="dropdown">
@@ -28,8 +28,10 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="#">Muffins</a>
-          
+
+            <a href="#" id="muffinDrpDown">Muffins</a>
+            <a href="#" id="sandwichDrpDown">Sandwiches</a>
+            <a href="#" id="bagelDrpDown">Bagel</a>
           </div>
         </div>
         <div class="dropdown">
@@ -54,51 +56,170 @@
         </div>
     </div>
   </header>
-
-
-<div class="mainPage container">
-  <div id="Coldbrew">
-      <img src="./assets/Coldbrew.png" alt="Coldbrew Coffee" id="coldbrewPNG">
+    
+<div class ="mainPage container">
+    <div id="Coldbrew" >
+      <img src="./assets/Coldbrew.png" alt="Coldbrew Coffee" id="coldbrewPNG" />
       <div>
-         <p>
-             place text here
-             place text here
-             place text here
-             place text here
-             place text here
-             place text here
-             place text here 
-             place text here
-             place text here
-         </p>
-      </div> 
-  </div>
-      <div id="Chaitea">
-          <div>
-              <p>
-                  place text here
-                  place text here
-                  place text here
-                  place text here
-                  place text here
-                  place text here
-                  place text here 
-                  place text here
-                  place text here
-              </p>
-          </div>
-          <img src="./assets/Chaitea.png" alt="Chaitea" id="chaiteaPNG">
-  <!-- create on-click to take user to different page -->
+        <p>
+          place text here place text here place text here place text here place
+          text here place text here place text here place text here place text
+          here
+        </p>
       </div>
+    </div>
+    <div id="Chaitea">
+      <div>
+        <p>
+          place text here place text here place text here place text here place
+          text here place text here place text here place text here place text
+          here
+        </p>
+      </div>
+      <img src="./assets/Chaitea.png" alt="Chaitea" id="chaiteaPNG" />
+      <!-- create on-click to take user to different page -->
+    </div>
 </div>
-
+    <div id = "coffeePage" class = "hidden">
+      <div class = "coldBrew">
+        <div>
+        <p>Vanilla Sweet Cream Cold Brew</p>
+        <p>Description</p>
+        <p>$4.25</p>
+        <button>Add to Cart</button>
+        </div>
+        <img id = "" alt="" srcset="">
+        
+      </div>
+      <div class = "caramelLatte">
+        <div>
+        <p>Caramel Latte</p>
+        <p>Description</p>
+        <p>$5.25</p>
+        <button>Add to Cart</button>
+        </div>
+        <img id = "" alt="" srcset="">
+        
+      </div>
+    </div>
+    <div id = "hotChocolatePage" class = "hidden">
+      <div class = "hotChocolate">
+        <div>
+        <p>Hot Chocolate</p>
+        <p>Description</p>
+        <p>$3.50</p>
+        <button>Add to Cart</button>
+        </div>
+        <img id = "" alt="" srcset="">
+        
+      </div>
+      <div class = "whiteHC">
+        <div>
+        <p>White Hot Chocolate</p>
+        <p>Description</p>
+        <p>$4.25</p>
+        <button>Add to Cart</button>
+        </div>
+        <img id = "" alt="" srcset="">
+        
+      </div>
+    </div>
+    <div id = "teaPage" class = "hidden">
+      <div class = "chaiTea">
+        <div>
+        <p>Chai Tea</p>
+        <p>Description</p>
+        <p>$4.25</p>
+        <button>Add to Cart</button>
+        </div>
+        <img id = "" alt="" srcset="">
+        
+      </div>
+      <div class = "matchaTea">
+        <div>
+        <p>Matcha Tea</p>
+        <p>Description</p>
+        <p>$4.50</p>
+        <button>Add to Cart</button>
+        </div>
+        <img id = "" alt="" srcset="">
+        
+      </div>
+    </div>
+    <div id = "muffinsPage" class = "hidden">
+      <div class = "bananaNut">
+        <div>
+        <p>Banana Nut Muffin</p>
+        <p>Description</p>
+        <p>$3.00</p>
+        <button>Add to Cart</button>
+        </div>
+        <img id = "" alt="" srcset="">
+        
+      </div>
+      <div class = "chocolateMuffin">
+        <div>
+        <p>Chocolate Muffin</p>
+        <p>Description</p>
+        <p>$3.00</p>
+        <button>Add to Cart</button>
+        </div>
+        <img id = "" alt="" srcset="">
+        
+      </div>
+    </div>
+    <div id = "sandwichPage" class = "hidden">
+      <div class = "BaconEgg">
+        <div>
+        <p>Bacon Egg & Cheese</p>
+        <p>Description</p>
+        <p>$4.50</p>
+        <button>Add to Cart</button>
+        </div>
+        <img id = "" alt="" srcset="">
+        
+      </div>
+      <div class = "sausageEgg">
+        <div>
+        <p>Sausage Egg & Cheese</p>
+        <p>Description</p>
+        <p>$4.50</p>
+        <button>Add to Cart</button>
+        </div>
+        <img id = "" alt="" srcset="">
+        
+      </div>
+    </div>
+    <div id = "bagelPage" class = "hidden">
+      <div class = "saltyBagel">
+        <div>
+        <p>Sam's Salty Bagel</p>
+        <p>Salty Bagel with veggie cream cheese spread.</p>
+        <p>$6.00</p>
+        <button>Add to Cart</button>
+        </div>
+        <img id = "" alt="" srcset="">
+        
+      </div>
+      <div class = "asiagoBagel">
+        <div>
+        <p>Asiago Bagel</p>
+        <p>Description</p>
+        <p>$4.25</p>
+        <button>Add to Cart</button>
+        </div>
+        <img id = "" alt="" srcset="">
+        
+      </div>
+    </div>
+   
 
  <div class="CartContainer container hidden">
-
         <div class="shoppingCart">
             <h1 class="Heading">Shopping Cart</h1>
             <h2 class="Action">Remove all</h2>
         </div>
+
 
         <div class="Cart-Items">
             <div class=" ">
