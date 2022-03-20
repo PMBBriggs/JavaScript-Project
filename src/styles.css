@@ -6,7 +6,6 @@ body {
     #f5edde 100%
   );
   background-repeat: no-repeat;
-  height: 100vh;
   margin: 0;
 }
 
@@ -124,8 +123,6 @@ header {
 #chaiteaPNG {
   width: 50%;
 }
-
-
 
 /*cart stuff*/
 .chai {
@@ -259,4 +256,3 @@ header {
 .hidden {
   display: none;
 }
-
