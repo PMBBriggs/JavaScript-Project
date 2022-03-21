@@ -7,6 +7,9 @@ body {
   );
   background-repeat: no-repeat;
   margin: 0;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Open Sans', sans-serif;
 }
 
 header {
@@ -19,11 +22,22 @@ header {
   width: 100vw;
 }
 
+
+.logo img {
+  height: 150px;
+  width: 200px;
+  object-fit: cover;
+  object-position: 150% 30%;
+  position: absolute;
+  padding-left: 10px;
+}
+
 .topnav {
   display: flex;
   overflow: hidden;
   height: 100px;
-  width: 100%;
+  width: 100vw;
+  padding: 10px;
   justify-content: flex-end;
   align-items: center;
 }
@@ -43,7 +57,7 @@ header {
   font-size: 30px;
   border: none;
   outline: none;
-  color: white;
+  color: #f5edde;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
@@ -105,6 +119,12 @@ header {
   /* float: ; */
 /* } */
 
+p {
+  color: #f5edde;
+  margin: 20px;
+}
+
+/* main ppage featured items */
 #Coldbrew {
   background-color: #ceb3c4;
   height: 500px;
@@ -256,3 +276,78 @@ header {
 .hidden {
   display: none;
 }
+
+/* product images */
+
+.coldBrew img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.caramelLatte img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.hotChocolate img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.whiteHC img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.chaiTea img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.matchaTea img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.bananaNut img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.chocolateMuffin img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.BaconEgg img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.sausageEgg img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.saltyBagel img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.asiagoBagel img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+/* end of product images */
