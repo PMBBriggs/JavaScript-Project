@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <title>Espresso Yourself</title>
-</head>
-<body>
-  <div class="logo">
-     <img src=".\assets\Espresso yourself full logo.png" alt="Espresso Yourself">
-  </div>
-  <header>
-   <div class="topnav">
-      <div class="dropdown">
-          <button class="dropbtn">Drinks
+  </head>
+  <body>
+    <div class="logo">
+      <img
+        src=".\assets\Espresso yourself full logo.png"
+        alt="Espresso Yourself"
+      />
+    </div>
+    <header>
+      <div class="topnav">
+        <div class="dropdown">
+          <button class="dropbtn">
+            Drinks
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content container">
@@ -25,9 +32,10 @@
             <a href="#" id="hcDrpDown">Hot Chocolate</a>
             <a href="#" id="teaDrpDown">Teas</a>
           </div>
-      </div>
-      <div class="dropdown">
-          <button class="dropbtn">Food
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Food
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content container">
@@ -35,9 +43,10 @@
             <a href="#" id="sandwichDrpDown">Sandwiches</a>
             <a href="#" id="bagelDrpDown">Bagel</a>
           </div>
-      </div>
-      <div class="dropdown">
-          <button class="dropbtn">locations
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            locations
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content container">
@@ -45,207 +54,187 @@
             <a href="#">Grand Rapids, MI</a>
             <a href="#">Belleville, MI</a>
           </div>
-      </div>
-      <div class="dropdown">
-         
-          <button class="dropbtn">About us
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            About us
             <i class="fa fa-caret-down"></i>
           </button>
-          </div>
-      <div class="dropdown">
-            <button class="dropbtn" onClick="showCartContainer(event)">Cart
-            </button> 
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" onClick="showCartContainer(event)">
+            Cart
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="mainPage container">
+      <div id="Coldbrew">
+        <img
+          src="./assets/Coldbrew.png"
+          alt="Coldbrew Coffee"
+          id="coldbrewPNG"
+        />
+        <div>
+          <p>
+            place text here place text here place text here place text here
+            place text here place text here place text here place text here
+            place text here
+          </p>
+        </div>
+      </div>
+      <div id="Chaitea">
+        <div>
+          <p>
+            place text here place text here place text here place text here
+            place text here place text here place text here place text here
+            place text here
+          </p>
+        </div>
+        <img src="./assets/Chaitea.png" alt="Chaitea" id="chaiteaPNG" />
+        <!-- create on-click to take user to different page -->
       </div>
     </div>
-  </header>  
-<div class ="mainPage container">
-    <div id="Coldbrew" >
-      <img src="./assets/Coldbrew.png" alt="Coldbrew Coffee" id="coldbrewPNG" />
-      <div>
-        <p>
-          place text here place text here place text here place text here place
-          text here place text here place text here place text here place text
-          here
-        </p>
+    <div id="coffeePage" class="hidden container">
+      <div class="coldBrew">
+        <div>
+          <p>Vanilla Sweet Cream Cold Brew</p>
+          <p>Description</p>
+          <p>$4.25</p>
+          <button onclick="addColdBrew()">Add to Cart</button>
+        </div>
+        <img src="./assets/cold brew 2.jpg" alt="Cold Brew" />
+      </div>
+      <div class="caramelLatte">
+        <div>
+          <p>Caramel Latte</p>
+          <p>Description</p>
+          <p>$5.25</p>
+          <button onclick="addCL()">Add to Cart</button>
+        </div>
+        <img src="./assets/caramel latte.jpg" alt=" caramel latte" />
       </div>
     </div>
-    <div id="Chaitea">
-      <div>
-        <p>
-          place text here place text here place text here place text here place
-          text here place text here place text here place text here place text
-          here
-        </p>
-      </div>
-      <img src="./assets/Chaitea.png" alt="Chaitea" id="chaiteaPNG" />
-      <!-- create on-click to take user to different page -->
-    </div>
-</div>
-<div class="container">
-    <div id = "coffeePage" class = "hidden">
-      <div class = "coldBrew">
+    <div id="hotChocolatePage" class="hidden container">
+      <div class="hotChocolate">
         <div>
-        <p>Vanilla Sweet Cream Cold Brew</p>
-        <p>Description</p>
-        <p>$4.25</p>
-        <button>Add to Cart</button>
+          <p>Hot Chocolate</p>
+          <p>Description</p>
+          <p>$3.50</p>
+          <button onclick="addHC()">Add to Cart</button>
         </div>
-        <img src="./assets/cold brew 2.jpg" alt="Cold Brew">
-        
+        <img src="./assets/hot chocolate 1.jpg" alt="hot chocolate" />
       </div>
-      <div class = "caramelLatte">
+      <div class="whiteHC">
         <div>
-        <p>Caramel Latte</p>
-        <p>Description</p>
-        <p>$5.25</p>
-        <button>Add to Cart</button>
+          <p>White Hot Chocolate</p>
+          <p>Description</p>
+          <p>$4.25</p>
+          <button onclick="addWHC()">Add to Cart</button>
         </div>
-        <img  src="./assets/caramel latte.jpg" alt=" caramel latte">
-        
+        <img
+          src="./assets/White Hot Chocolate.jfif"
+          alt="white hot chocolate"
+        />
       </div>
     </div>
-    <div id = "hotChocolatePage" class = "hidden">
-      <div class = "hotChocolate">
+    <div id="teaPage" class="hidden container">
+      <div class="chaiTea">
         <div>
-        <p>Hot Chocolate</p>
-        <p>Description</p>
-        <p>$3.50</p>
-        <button>Add to Cart</button>
+          <p>Chai Tea</p>
+          <p>Description</p>
+          <p>$4.25</p>
+          <button onclick="addChaiTea()">Add to Cart</button>
         </div>
-        <img src="./assets/hot chocolate 1.jpg" alt="hot chocolate" >
-        
+        <img src="./assets/I love chai.jpg" alt="chai tea" />
       </div>
-      <div class = "whiteHC">
+      <div class="matchaTea">
         <div>
-        <p>White Hot Chocolate</p>
-        <p>Description</p>
-        <p>$4.25</p>
-        <button>Add to Cart</button>
+          <p>Matcha Tea</p>
+          <p>Description</p>
+          <p>$4.50</p>
+          <button onclick="addMatchaTea()">Add to Cart</button>
         </div>
-        <img  src="./assets/White Hot Chocolate.jfif" alt="white hot chocolate">
-        
+        <img src="./assets/matcha mug 1.jpg" alt="matcha tea" />
       </div>
     </div>
-    <div id = "teaPage" class = "hidden">
-      <div class = "chaiTea">
+    <div id="muffinsPage" class="hidden container">
+      <div class="bananaNut">
         <div>
-        <p>Chai Tea</p>
-        <p>Description</p>
-        <p>$4.25</p>
-        <button>Add to Cart</button>
+          <p>Banana Nut Muffin</p>
+          <p>Description</p>
+          <p>$3.00</p>
+          <button onclick="addBNM()">Add to Cart</button>
         </div>
-        <img  src="./assets/I love chai.jpg" alt="chai tea" >
-        
+        <img src="./assets/muffins 1.jpg" alt="banana nut muffin" />
       </div>
-      <div class = "matchaTea">
+      <div class="chocolateMuffin">
         <div>
-        <p>Matcha Tea</p>
-        <p>Description</p>
-        <p>$4.50</p>
-        <button>Add to Cart</button>
+          <p>Chocolate Muffin</p>
+          <p>Description</p>
+          <p>$3.00</p>
+          <button>Add to Cart</button>
         </div>
-        <img src="./assets/matcha mug 1.jpg" alt="matcha tea" >
-        
+        <img src="./assets/chocolate muffin.jpg" alt="chocolate muffin" />
       </div>
     </div>
-    <div id = "muffinsPage" class = "hidden">
-      <div class = "bananaNut">
+    <div id="sandwichPage" class="hidden container">
+      <div class="BaconEgg">
         <div>
-        <p>Banana Nut Muffin</p>
-        <p>Description</p>
-        <p>$3.00</p>
-        <button>Add to Cart</button>
+          <p>Bacon Egg & Cheese</p>
+          <p>Description</p>
+          <p>$4.50</p>
+          <button onclick="addCM()">Add to Cart</button>
         </div>
-        <img src="./assets/muffins 1.jpg" alt="banana nut muffin">
-      
+        <img
+          src="./assets/bacon egg and cheese 2.jpg"
+          alt="bacon egg and cheese"
+        />
       </div>
-      <div class = "chocolateMuffin">
+      <div class="sausageEgg">
         <div>
-        <p>Chocolate Muffin</p>
-        <p>Description</p>
-        <p>$3.00</p>
-        <button>Add to Cart</button>
+          <p>Sausage Egg & Cheese</p>
+          <p>Description</p>
+          <p>$4.50</p>
+          <button onclick="addBEC()">Add to Cart</button>
         </div>
-        <img  src="./assets/chocolate muffin.jpg" alt="chocolate muffin">
-        
-      </div>
-    </div>
-    <div id = "sandwichPage" class = "hidden">
-      <div class = "BaconEgg">
-        <div>
-        <p>Bacon Egg & Cheese</p>
-        <p>Description</p>
-        <p>$4.50</p>
-        <button>Add to Cart</button>
-        </div>
-        <img src="./assets/bacon egg and cheese 2.jpg" alt="bacon egg and cheese">
-        
-      </div>
-      <div class = "sausageEgg">
-        <div>
-        <p>Sausage Egg & Cheese</p>
-        <p>Description</p>
-        <p>$4.50</p>
-        <button>Add to Cart</button>
-        </div>
-        <img src="./assets/sausage egg and cheese.jpg" alt="sausage egg and cheese">
-        
+        <img
+          src="./assets/sausage egg and cheese.jpg"
+          alt="sausage egg and cheese"
+        />
       </div>
     </div>
-    <div id = "bagelPage" class = "hidden">
-      <div class = "saltyBagel">
+    <div id="bagelPage" class="hidden container">
+      <div class="saltyBagel">
         <div>
-        <p>Sam's Salty Bagel</p>
-        <p>Salty Bagel with veggie cream cheese spread.</p>
-        <p>$6.00</p>
-        <button>Add to Cart</button>
+          <p>Sam's Salty Bagel</p>
+          <p>Salty Bagel with veggie cream cheese spread.</p>
+          <p>$6.00</p>
+          <button onclick="addSSB()">Add to Cart</button>
         </div>
-        <img  src="./assets/salt bagel.jpeg" alt="salt bagel">
-        
+        <img src="./assets/salt bagel.jpeg" alt="salt bagel" />
       </div>
-      <div class = "asiagoBagel">
+      <div class="asiagoBagel">
         <div>
-        <p>Asiago Bagel</p>
-        <p>Description</p>
-        <p>$4.25</p>
-        <button>Add to Cart</button>
+          <p>Asiago Bagel</p>
+          <p>Description</p>
+          <p>$4.25</p>
+          <button onclick="addAB()">Add to Cart</button>
         </div>
-        <img src="./assets/asiago bagel.jpg"  alt="asiago bagel">
-        
+        <img src="./assets/asiago bagel.jpg" alt="asiago bagel" />
       </div>
     </div>
-  </div>
 
- <div class="CartContainer container hidden">
-        <div class="shoppingCart">
-            <h1 class="Heading">Shopping Cart</h1>
-            <h2 class="Action">Remove all</h2>
-        </div>
-
-
-        <div class="Cart-Items">
-            <div class=" ">
-                <img src="./assets/Chaitea.png" class="chai" />
-            </div>
-
-            <div class="about">
-                <h3 class="title">Mocha</h3>
-                <h4 class="subtitle">16oz.</h4>
-            </div>
-
-            <form id="myquantityform">
-                <div class="howmany">
-                   <label for="quantity" class="first">Quantity?</label>
-                   <input type="number" min="0"   class="howmanybox" name="quantity">
-               </div>
-            </form>
-            <div class="prices">
-                <div class="amount">$5.49</div>
-                <div class="remove"><u>Remove</u></div>
-                <button class="checkout">Checkout</button>
-            </div>
+    <div class="CartContainer container hidden">
+      <div class="shoppingCart">
+        <h1 class="Heading">Shopping Cart</h1>
+        <h2 class="Action" onclick="removeItems()">Remove all</h2>
       </div>
-      <div class = "payOptions hidden">
+
+      <div class="cartItems"></div>
+    
+    </div>
+<div class = "payOptions hidden">
         <form>
         <h1 class="payMethodHeading"> Payment Method: </h1>
        <input type="radio" id="cashMethod" name="paymentMethod" value="Cash">
@@ -328,7 +317,7 @@
           </div>
         </div>
       </form>
-    </div>
+        </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

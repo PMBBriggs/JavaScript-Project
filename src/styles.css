@@ -1,3 +1,7 @@
+html {
+  min-height: 100%;
+}
+
 body {
   background-image: linear-gradient(
     233deg,
@@ -7,8 +11,7 @@ body {
   );
   background-repeat: no-repeat;
   margin: 0;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100%;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -144,7 +147,7 @@ p {
 }
 
 /*cart stuff*/
-.chai {
+.cartImage {
   height: 120px;
 }
 
@@ -169,7 +172,7 @@ p {
 }
 
 .Heading {
-  font-size: 20px;
+  font-size: 40px;
   font-family: "Open Sans";
   font-weight: 700;
   color: #2f3841;
@@ -184,13 +187,15 @@ p {
   border-bottom: 1px solid #e44c4c;
 }
 
-.Cart-Items {
+.cartItems {
   margin: auto;
   width: 90%;
   height: 30%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+  margin-left: 0px;
 }
 .image-box {
   width: 15%;
@@ -351,6 +356,7 @@ p {
 }
 /* end of product images */
 
+
 .row {
   display: -ms-flexbox; /* IE10 */
   display: flex;
@@ -434,3 +440,42 @@ span.price {
 .payMethodHeading {
   color: #202020;
 }
+
+/* product container styling*/
+
+.coldBrew {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+.caramelLatte {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 130px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.whiteHC {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 130px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.hotChocolate {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 130px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.quantity {
+  color: #202020;
+}
+.cartItem {
+  margin-left: 50px;
+  width: 100%;
+  padding: 15px;
+}
+
