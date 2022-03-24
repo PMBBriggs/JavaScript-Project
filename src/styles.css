@@ -12,7 +12,7 @@ body {
   background-repeat: no-repeat;
   margin: 0;
   min-height: 100%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 header {
@@ -24,7 +24,6 @@ header {
   margin: 0;
   width: 100vw;
 }
-
 
 .logo img {
   height: 150px;
@@ -173,7 +172,7 @@ p {
 }
 
 .Heading {
-  font-size: 20px;
+  font-size: 40px;
   font-family: "Open Sans";
   font-weight: 700;
   color: #2f3841;
@@ -195,6 +194,8 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+  margin-left: 0px;
 }
 .image-box {
   width: 15%;
@@ -354,3 +355,40 @@ p {
   border-radius: 50%;
 }
 /* end of product images */
+/* product container styling*/
+
+.coldBrew {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+.caramelLatte {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 130px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.whiteHC {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 130px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.hotChocolate {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 130px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.quantity {
+  color: #202020;
+}
+.cartItem {
+  margin-left: 50px;
+  width: 100%;
+  padding: 15px;
+}

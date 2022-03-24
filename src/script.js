@@ -1,39 +1,58 @@
+document.querySelector("#coffeeDrpDown").addEventListener("click", (event) => {
+  event.preventDefault();
+  var containers = document.querySelectorAll(".container");
+  for (let i = 0; i < containers.length; i++) {
+    containers[i].classList.add("hidden");
+  }
+  document.querySelector("#coffeePage").classList.remove("hidden");
+});
 
-document.querySelector('#coffeeDrpDown').addEventListener("click", (event) => { 
-    event.preventDefault();
-    document.querySelector('#coffeePage').style.display = "block";
-    document.querySelector('.mainPage').style.display = "none";
-})
+document.querySelector("#hcDrpDown").addEventListener("click", (event) => {
+  event.preventDefault();
+  var containers = document.querySelectorAll(".container");
+  for (let i = 0; i < containers.length; i++) {
+    containers[i].classList.add("hidden");
+  }
+  document.querySelector("#hotChocolatePage").classList.remove("hidden");
+});
 
-document.querySelector('#hcDrpDown').addEventListener("click", (event) => { 
-    event.preventDefault();
-    document.querySelector('#hotChocolatePage').style.display = "block";
-    document.querySelector('.mainPage').style.display = "none";
-})
+document.querySelector("#teaDrpDown").addEventListener("click", (event) => {
+  event.preventDefault();
+  var containers = document.querySelectorAll(".container");
+  for (let i = 0; i < containers.length; i++) {
+    containers[i].classList.add("hidden");
+  }
+  document.querySelector("#teaPage").classList.remove("hidden");
+});
 
-document.querySelector('#teaDrpDown').addEventListener("click", (event) => { 
-    event.preventDefault();
-    document.querySelector('#teaPage').style.display = "block";
-    document.querySelector('.mainPage').style.display = "none";
-})
+document.querySelector("#muffinDrpDown").addEventListener("click", (event) => {
+  event.preventDefault();
+  var containers = document.querySelectorAll(".container");
+  for (let i = 0; i < containers.length; i++) {
+    containers[i].classList.add("hidden");
+  }
+  document.querySelector("#muffinsPage").classList.remove("hidden");
+});
 
-document.querySelector('#muffinDrpDown').addEventListener("click", (event) => { 
+document
+  .querySelector("#sandwichDrpDown")
+  .addEventListener("click", (event) => {
     event.preventDefault();
-    document.querySelector('#muffinsPage').style.display = "block";
-    document.querySelector('.mainPage').style.display = "none";
-})
+    var containers = document.querySelectorAll(".container");
+    for (let i = 0; i < containers.length; i++) {
+      containers[i].classList.add("hidden");
+    }
+    document.querySelector("#sandwichPage").classList.remove("hidden");
+  });
 
-document.querySelector('#sandwichDrpDown').addEventListener("click", (event) => { 
-    event.preventDefault();
-    document.querySelector('#sandwichPage').style.display = "block";
-    document.querySelector('.mainPage').style.display = "none";
-})
-
-document.querySelector('#bagelDrpDown').addEventListener("click", (event) => { 
-    event.preventDefault();
-    document.querySelector('#bagelPage').style.display = "block";
-    document.querySelector('.mainPage').style.display = "none";
-})
+document.querySelector("#bagelDrpDown").addEventListener("click", (event) => {
+  event.preventDefault();
+  var containers = document.querySelectorAll(".container");
+  for (let i = 0; i < containers.length; i++) {
+    containers[i].classList.add("hidden");
+  }
+  document.querySelector("#bagelPage").classList.remove("hidden");
+});
 
 // start of cart
 
@@ -51,167 +70,173 @@ function addColdBrew() {
     price: 4.25,
     quantity: 1,
     imagePath: "./assets/cold brew 2.jpg",
-    }
-    createCartItem(temp);
-    }
-  // on click executes coldBrew ( tie to add to cart button)
+  };
+  createCartItem(temp);
+}
+// on click executes coldBrew ( tie to add to cart button)
 
-
-
-  function addCL () {
-    var temp = {
+function addCL() {
+  var temp = {
     name: "Caramel Latte",
     price: 5.25,
     quantity: 1,
     imagePath: "./assets/caramel latte.jpg",
-    }
-    createCartItem(temp);
-    }
-  
-  
-  function addHC () {
-    var temp = {
+  };
+  createCartItem(temp);
+}
+
+function addHC() {
+  var temp = {
     name: "Hot Chocolate",
-    price: 3.50,
+    price: 3.5,
     quantity: 1,
     imagePath: "./assets/hot chocolate 1.jpg",
-    }
-    createCartItem(temp);
-    }
-  
-  function addWHC () {
-    var temp = {
+  };
+  createCartItem(temp);
+}
+
+function addWHC() {
+  var temp = {
     name: "White Hot Chocolate",
     price: 4.25,
     quantity: 1,
     imagePath: "./assets/White Hot Chocolate.jfif",
-    }
-    createCartItem(temp);
-    }
-  
-  function addChaiTea () {
-    var temp = {
+  };
+  createCartItem(temp);
+}
+
+function addChaiTea() {
+  var temp = {
     name: "Chai Tea",
     price: 4.25,
     quantity: 1,
     imagePath: "./assets/I love chai.jpg",
-    }
-    createCartItem(temp);
-    }
-  
-  function addMatchaTea () {
-    var temp = {
+  };
+  createCartItem(temp);
+}
+
+function addMatchaTea() {
+  var temp = {
     name: "Matcha Tea",
-    price: 4.50,
+    price: 4.5,
     quantity: 1,
     imagePath: "./assets/matcha mug 1.jpg",
-    }
-    createCartItem(temp);
-    }
-  
-  function addBNM () {
-    var temp = {
+  };
+  createCartItem(temp);
+}
+
+function addBNM() {
+  var temp = {
     name: "Banana Nut Muffin",
-    price: 3.00,
+    price: 3.0,
     quantity: 1,
     imagePath: "./assets/muffins 1.jpg",
-    }
-    createCartItem(temp);
-    }
-  
-  function addCM () {
-    var temp = {
+  };
+  createCartItem(temp);
+}
+
+function addCM() {
+  var temp = {
     name: "Chocolate Muffin",
-    price: 3.00,
+    price: 3.0,
     quantity: 1,
     imagePath: "./assets/chocolate muffin.jpg",
-    }
-    createCartItem(temp);
-    }
+  };
+  createCartItem(temp);
+}
 
-  function addBEC () {
-    var temp = {
+function addBEC() {
+  var temp = {
     name: "Bacon Egg & Cheese",
-    price: 5.50,
+    price: 5.5,
     quantity: 1,
     imagePath: "./assets/bacon egg and cheese 2.jpg",
-    }
-    createCartItem(temp);
-    }
+  };
+  createCartItem(temp);
+}
 
-  function addSEC () {
-    var temp = {
+function addSEC() {
+  var temp = {
     name: "Sausage Egg & Cheese",
-    price: 5.50,
+    price: 5.5,
     quantity: 1,
     imagePath: "./assets/sausage egg and cheese.jpg",
-    }
-    createCartItem(temp);
-    }
+  };
+  createCartItem(temp);
+}
 
-  function addSSB () {
-    var temp = {
+function addSSB() {
+  var temp = {
     name: "Sam's Salty Bagel",
-    price: 6.00,
+    price: 6.0,
     quantity: 1,
     imagePath: "./assets/salt bagel.jpeg",
-    }
-    createCartItem(temp);
-    }
+  };
+  createCartItem(temp);
+}
 
-  function addAB() {
-    var temp = {
+function addAB() {
+  var temp = {
     name: "Asiago Bagel",
     price: 4.25,
     quantity: 1,
     imagePath: "./assets/asiago bagel.jpg",
-    }
-    createCartItem(temp);
-    }
+  };
+  createCartItem(temp);
+}
 
 var cart = [];
 
 function createCartItem(item) {
-  var root = document.createElement("div")
+  var root = document.createElement("div");
+  root.classList.add("cartItem");
   root.innerHTML = `<div class=" ">
   <img src="${item.imagePath}" class="cartImage" />
-</div>
+  </div>
 
-<div class="about">
-  <h3 class="title">${item.name}</h3>
-  <h4 class="subtitle">16oz.</h4>
-</div>
+  <div class="about">
+    <h3 class="title">${item.name}</h3>
+    <h4 class="subtitle">16oz.</h4>
+  </div>
 
-<form id="myquantityform">
-  <div class="howmany">
-     <label for="quantity" class="first">Quantity?</label>
-     <input type="number" min="0"   class="howmanybox" name="quantity" value= "${item.quantity}">
- </div>
-</form>
-<div class="prices">
-  <div class="amount">${item.price}</div>
-  <div class="remove"><u>Remove</u></div>
-</div> `
+  <p class="quantity">
+    Quantity: ${item.quantity}
+  </p>
+  <div class="prices">
+    <div class="amount">$${item.price}</div>
+  </div>`;
 
-document.querySelector(".cartItems").appendChild(root)
+  document.querySelector(".cartItems").appendChild(root);
+
+  // cartQuantity(item);
 }
 
-
-
-// cart 1
-// document.querySelector(".amount").innerText = `$${
-//   items[0].price * items[0].quantity
-// }`;
-// document.querySelector(".howmanybox").value = items[0].quantity;
-// document.querySelector("#myquantityform").addEventListener("submit", (e) => {
-//   var formData = new FormData(e.target);
-//   items[0].quantity = formData.get("quantity");
-//   document.querySelector(".amount").innerText = `$${
-//     items[0].price * items[0].quantity
-//   }`;
-//   e.preventDefault();
-// });
-
-// getElementbyclass ( class of product container) 
-// pull product container and add to cart through query selector? or by array?
-
+function cartQuantity(item) {
+  document.querySelector(".amount").innerText = `$${
+    item.price * item.quantity
+  }`;
+  document.querySelector(".howmanybox").value = item.quantity;
+  document.querySelector("#myquantityform").addEventListener("submit", (e) => {
+    var formData = new FormData(e.target);
+    item.quantity = formData.get("quantity");
+    document.querySelector(".amount").innerText = `$${
+      item.price * item.quantity
+    }`;
+    e.preventDefault();
+  });
+}
+function submitForm(e) {
+  var formData = new FormData(e.target);
+  item.quantity = formData.get("quantity");
+  document.querySelector(".amount").innerText = `$${
+    item.price * item.quantity
+  }`;
+  e.preventDefault();
+}
+function removeItems(e) {
+  var cart = document.querySelector(".cartItems");
+  var children = cart.querySelectorAll(".cartItem");
+  for (let i = 0; i < children.length; i++) {
+    children[i].remove();
+  }
+}
