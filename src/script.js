@@ -218,7 +218,7 @@ document.querySelector(".checkout").addEventListener("click", (event) => {
   event.preventDefault();
   document.querySelector(".payOptions").style.display = "block";
   document.querySelector(".mainPage").style.display = "none";
-  document.querySelector(".Cart-Items").style.display = "none";
+  document.querySelector(".cartItems").style.display = "none";
   document.querySelector(".shoppingCart").style.display = "none";
 });
 // *****when you choose the cash radio button it takes you to cash method form***
@@ -246,18 +246,29 @@ btnPm.addEventListener("click", (event) => {
       break;
     }
   }
+
+
+//cashGiven Receipt
+document.querySelector(".cashSubmit").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector(".receiptPayment").style.display = "block";
+  document.querySelector(".cartItems").style.display = "block";
+  document.querySelector(".cashGiven").style.display = "block";
+  document.querySelector(".cardGiven").style.display = "none";
+  document.querySelector(".cashOption").style.display = "none";
 });
-// getting data from the cash and card forms
-// cash form
-document.querySelector(".cashSubmit").addEventListener("click", (event) => {
-  event.preventDefault();
-  const form = document.querySelector(".cashForm");
-  const Data = new FormData(form);
-  let amountGiven = data.get("given");
-  console.log(amountGiven);
-  console.log(Data);
+//cardGiven Receipt
+document.querySelector(".cardSubmit").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector(".receiptPayment").style.display = "block";
+  document.querySelector(".cartItems").style.display = "block";
+  document.querySelector(".cashGiven").style.display = "none";
+  document.querySelector(".cardGiven").style.display = "block";
+  document.querySelector(".cardOption").style.display = "none";
 });
+
 //removing all items from cart
+
 function removeItems(e) {
   cartTotal = [];
   var cart = document.querySelector(".cartItems");
