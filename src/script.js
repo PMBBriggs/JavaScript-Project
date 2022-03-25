@@ -56,7 +56,6 @@ document.querySelector("#bagelDrpDown").addEventListener("click", (event) => {
 
 // start of cart
 
-
 function showCartContainer(e) {
   var containers = document.querySelectorAll(".container");
   for (let i = 0; i < containers.length; i++) {
@@ -212,6 +211,25 @@ function createCartItem(item) {
   // cartQuantity(item);
 }
 
+// function createCashReceipt() {
+//   var root = document.createElement("div");
+//   root.classList.add("cashReceipt");
+//   root.innerHTML = `<div class= "cashGiven" >
+
+//   <p>Amount Given from cash Form</p>
+// </div>
+
+// <div class= "change">
+// <p>Change</p>
+// </div>;
+
+// `;
+//   document.querySelector(".cartItems").appendChild(root);
+// }
+// document.querySelector(".cashSubmit").addEventListener("click", () => {
+//   createCashReceipt();
+// });
+
 function cartQuantity(item) {
   document.querySelector(".amount").innerText = `$${
     item.price * item.quantity
@@ -233,14 +251,13 @@ function submitForm(e) {
     item.price * item.quantity
   }`;
   e.preventDefault();
-
-});
+}
 // when you click checkout in cart takes you to payment method radio button forms
 document.querySelector(".checkout").addEventListener("click", (event) => {
   event.preventDefault();
   document.querySelector(".payOptions").style.display = "block";
   document.querySelector(".mainPage").style.display = "none";
-  document.querySelector(".Cart-Items").style.display = "none";
+  document.querySelector(".cartItems").style.display = "none";
   document.querySelector(".shoppingCart").style.display = "none";
 });
 // *****when you choose the cash radio button it takes you to cash method form***
@@ -258,12 +275,12 @@ btnPm.addEventListener("click", (event) => {
         document.querySelector(".cashOption").style.display = "block";
         document.querySelector(".payOptions").style.display = "none";
         document.querySelector(".mainPage").style.display = "none";
-        document.querySelector(".Cart-Items").style.display = "none";
+        document.querySelector(".cartItems").style.display = "none";
       } else if (payMethodBtn.id === "cardMethod") {
         document.querySelector(".cardOption").style.display = "block";
         document.querySelector(".payOptions").style.display = "none";
         document.querySelector(".mainPage").style.display = "none";
-        document.querySelector(".Cart-Items").style.display = "none";
+        document.querySelector(".cartItems").style.display = "none";
       }
       break;
     }
@@ -271,16 +288,34 @@ btnPm.addEventListener("click", (event) => {
 });
 // getting data from the cash and card forms
 // cash form
-document.querySelector(".cashSubmit").addEventListener("click", (event) => {
-  event.preventDefault();
-  const form = document.querySelector(".cashForm");
-  const Data = new FormData(form);
-  let amountGiven = data.get("given");
-  console.log(amountGiven);
-  console.log(Data);
+// document.querySelector(".cashSubmit").addEventListener("click", (event) => {
+//   event.preventDefault();
+//   const form = document.querySelector(".cashForm");
+//   const Data = new FormData(form);
+//   let amountGiven = data.get("given");
+//   console.log(amountGiven);
+//   console.log(Data);
+// });
+
+//cashGiven Receipt
+document.querySelector(".cashSubmit").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector(".receiptPayment").style.display = "block";
+  document.querySelector(".cartItems").style.display = "block";
+  document.querySelector(".cashGiven").style.display = "block";
+  document.querySelector(".cardGiven").style.display = "none";
+  document.querySelector(".cashOption").style.display = "none";
+});
+//cardGiven Receipt
+document.querySelector(".cardSubmit").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector(".receiptPayment").style.display = "block";
+  document.querySelector(".cartItems").style.display = "block";
+  document.querySelector(".cashGiven").style.display = "none";
+  document.querySelector(".cardGiven").style.display = "block";
+  document.querySelector(".cardOption").style.display = "none";
 });
 
-}
 function removeItems(e) {
   var cart = document.querySelector(".cartItems");
   var children = cart.querySelectorAll(".cartItem");
@@ -288,4 +323,3 @@ function removeItems(e) {
     children[i].remove();
   }
 }
-
