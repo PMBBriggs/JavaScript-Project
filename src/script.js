@@ -62,6 +62,7 @@ function showCartContainer(e) {
     containers[i].classList.add("hidden");
   }
   document.querySelector(".CartContainer").classList.remove("hidden");
+  calculateTotal();
   e.preventDefault();
 }
 function addColdBrew() {
@@ -206,52 +207,12 @@ function createCartItem(item) {
     <div class="amount">$${item.price}</div>
   </div>`;
 
+  // adding items to page/cart
   document.querySelector(".cartItems").appendChild(root);
-
+  cartTotal.push(item);
   // cartQuantity(item);
 }
 
-// function createCashReceipt() {
-//   var root = document.createElement("div");
-//   root.classList.add("cashReceipt");
-//   root.innerHTML = `<div class= "cashGiven" >
-
-//   <p>Amount Given from cash Form</p>
-// </div>
-
-// <div class= "change">
-// <p>Change</p>
-// </div>;
-
-// `;
-//   document.querySelector(".cartItems").appendChild(root);
-// }
-// document.querySelector(".cashSubmit").addEventListener("click", () => {
-//   createCashReceipt();
-// });
-
-function cartQuantity(item) {
-  document.querySelector(".amount").innerText = `$${
-    item.price * item.quantity
-  }`;
-  document.querySelector(".howmanybox").value = item.quantity;
-  document.querySelector("#myquantityform").addEventListener("submit", (e) => {
-    var formData = new FormData(e.target);
-    item.quantity = formData.get("quantity");
-    document.querySelector(".amount").innerText = `$${
-      item.price * item.quantity
-    }`;
-    e.preventDefault();
-  });
-}
-function submitForm(e) {
-  var formData = new FormData(e.target);
-  item.quantity = formData.get("quantity");
-  document.querySelector(".amount").innerText = `$${
-    item.price * item.quantity
-  }`;
-  e.preventDefault();
-}
 // when you click checkout in cart takes you to payment method radio button forms
 document.querySelector(".checkout").addEventListener("click", (event) => {
   event.preventDefault();
@@ -285,17 +246,7 @@ btnPm.addEventListener("click", (event) => {
       break;
     }
   }
-});
-// getting data from the cash and card forms
-// cash form
-// document.querySelector(".cashSubmit").addEventListener("click", (event) => {
-//   event.preventDefault();
-//   const form = document.querySelector(".cashForm");
-//   const Data = new FormData(form);
-//   let amountGiven = data.get("given");
-//   console.log(amountGiven);
-//   console.log(Data);
-// });
+
 
 //cashGiven Receipt
 document.querySelector(".cashSubmit").addEventListener("click", (e) => {
@@ -316,10 +267,31 @@ document.querySelector(".cardSubmit").addEventListener("click", (e) => {
   document.querySelector(".cardOption").style.display = "none";
 });
 
+//removing all items from cart
+
 function removeItems(e) {
+  cartTotal = [];
   var cart = document.querySelector(".cartItems");
   var children = cart.querySelectorAll(".cartItem");
   for (let i = 0; i < children.length; i++) {
     children[i].remove();
   }
+  calculateTotal();
+}
+var cartTotal = [];
+function calculateTotal() {
+  var subtotal = 0;
+  for (let i = 0; i < cartTotal.length; i++) {
+    subtotal += cartTotal[i].price;
+  }
+  document.querySelector(
+    ".subtotal"
+  ).innerText = `Subtotal: $${subtotal.toFixed(2)}`;
+  document.querySelector(".taxes").innerText = `Tax: $${(
+    subtotal * 0.06
+  ).toFixed(2)}`;
+  document.querySelector(".total").innerText = `Total $${(
+    subtotal * 0.06 +
+    subtotal
+  ).toFixed(2)}`;
 }

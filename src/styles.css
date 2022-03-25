@@ -62,7 +62,7 @@ header {
   color: #f5edde;
   background-color: inherit;
   font-family: inherit;
-  margin: 0;
+  margin: 10px;
   transition: ease-in-out 0.2s;
 }
 
@@ -122,10 +122,16 @@ header {
 /* } */
 
 p {
-  color: #f5edde;
-  margin: 20px;
-}
+  color: black;
 
+  font-size: 25px;
+}
+#ctheader {
+  text-align: center;
+}
+#cbgeader {
+  text-align: center;
+}
 /* main ppage featured items */
 #Coldbrew {
   background-color: #ceb3c4;
@@ -356,7 +362,6 @@ p {
 }
 /* end of product images */
 
-
 .row {
   display: -ms-flexbox; /* IE10 */
   display: flex;
@@ -478,4 +483,3 @@ span.price {
   width: 100%;
   padding: 15px;
 }
-

@@ -15,10 +15,7 @@
   </head>
   <body>
     <div class="logo">
-      <img
-        src=".\assets\Espresso yourself full logo.png"
-        alt="Espresso Yourself"
-      />
+      <img src=".\assets\Espresso yourself full logo.png" alt="Espresso Yourself" />
     </div>
     <header>
       <div class="topnav">
@@ -76,19 +73,23 @@
           id="coldbrewPNG"
         />
         <div>
-          <p>
-            place text here place text here place text here place text here
-            place text here place text here place text here place text here
-            place text here
+          <p id="coldbreParagraph">
+            <p id="cbheader">VANILLA SWEET CREAM COLD BREW</p>
+            Our slow-steeped custom blend of Cold Brew coffee accented with vanilla and topped with a delicate float of house-made vanilla sweet cream that cascades throughout the cup. It's over-the-top and super-smooth.
+            <p>
+              110 calories, 14g sugar, 5g fat
+            </p> 
           </p>
         </div>
       </div>
       <div id="Chaitea">
         <div>
-          <p>
-            place text here place text here place text here place text here
-            place text here place text here place text here place text here
-            place text here
+          <p id="chaiParagraph">
+            <p id="ctheader">CHAI TEA LATTE</p>
+            Black tea infused with cinnamon, clove and other warming spices is combined with steamed milk and topped with foam for the perfect balance of sweet and spicy. An iconic chai cup.
+            <p>
+              240 calories, 42g sugar, 4.5g fat
+            </p>
           </p>
         </div>
         <img src="./assets/Chaitea.png" alt="Chaitea" id="chaiteaPNG" />
@@ -229,12 +230,20 @@
       <div class="shoppingCart">
         <h1 class="Heading">Shopping Cart</h1>
         <h2 class="Action" onclick="removeItems()">Remove all</h2>
+
         <button class="checkout">Checkout</button>
       </div>
 
+
+      </div>
+      
       <div class="cartItems"></div>
 
-      <div class="payOptions hidden">
+      <p class="subtotal"></p>
+      <p class="taxes"></p>
+      <p class="total"></p>
+      <div class = "payOptions hidden">
+
         <form>
           <h1 class="payMethodHeading">Payment Method:</h1>
           <input
@@ -420,10 +429,16 @@
             <p>Order Number:</p>
           </div>
         </div>
+
       </div>
       <!-- cartDiv -->
     </div>
 
+
+    <!-- </div> -->
+    
+
     <script src="script.js"></script>
   </body>
 </html>
+
