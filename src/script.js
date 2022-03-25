@@ -56,13 +56,13 @@ document.querySelector("#bagelDrpDown").addEventListener("click", (event) => {
 
 // start of cart
 
-
 function showCartContainer(e) {
   var containers = document.querySelectorAll(".container");
   for (let i = 0; i < containers.length; i++) {
     containers[i].classList.add("hidden");
   }
   document.querySelector(".CartContainer").classList.remove("hidden");
+  calculateTotal();
   e.preventDefault();
 }
 function addColdBrew() {
@@ -207,34 +207,12 @@ function createCartItem(item) {
     <div class="amount">$${item.price}</div>
   </div>`;
 
+  // adding items to page/cart
   document.querySelector(".cartItems").appendChild(root);
-
+  cartTotal.push(item);
   // cartQuantity(item);
 }
 
-function cartQuantity(item) {
-  document.querySelector(".amount").innerText = `$${
-    item.price * item.quantity
-  }`;
-  document.querySelector(".howmanybox").value = item.quantity;
-  document.querySelector("#myquantityform").addEventListener("submit", (e) => {
-    var formData = new FormData(e.target);
-    item.quantity = formData.get("quantity");
-    document.querySelector(".amount").innerText = `$${
-      item.price * item.quantity
-    }`;
-    e.preventDefault();
-  });
-}
-function submitForm(e) {
-  var formData = new FormData(e.target);
-  item.quantity = formData.get("quantity");
-  document.querySelector(".amount").innerText = `$${
-    item.price * item.quantity
-  }`;
-  e.preventDefault();
-
-});
 // when you click checkout in cart takes you to payment method radio button forms
 document.querySelector(".checkout").addEventListener("click", (event) => {
   event.preventDefault();
@@ -258,12 +236,12 @@ btnPm.addEventListener("click", (event) => {
         document.querySelector(".cashOption").style.display = "block";
         document.querySelector(".payOptions").style.display = "none";
         document.querySelector(".mainPage").style.display = "none";
-        document.querySelector(".Cart-Items").style.display = "none";
+        document.querySelector(".cartItems").style.display = "none";
       } else if (payMethodBtn.id === "cardMethod") {
         document.querySelector(".cardOption").style.display = "block";
         document.querySelector(".payOptions").style.display = "none";
         document.querySelector(".mainPage").style.display = "none";
-        document.querySelector(".Cart-Items").style.display = "none";
+        document.querySelector(".cartItems").style.display = "none";
       }
       break;
     }
@@ -279,13 +257,25 @@ document.querySelector(".cashSubmit").addEventListener("click", (event) => {
   console.log(amountGiven);
   console.log(Data);
 });
-
-}
+//removing all items from cart
 function removeItems(e) {
+  cartTotal = [];
   var cart = document.querySelector(".cartItems");
   var children = cart.querySelectorAll(".cartItem");
   for (let i = 0; i < children.length; i++) {
     children[i].remove();
   }
+  calculateTotal();
 }
-
+var cartTotal = [];
+function calculateTotal() {
+  var subtotal = 0;
+  for (let i = 0; i < cartTotal.length; i++) {
+    subtotal += cartTotal[i].price;
+  }
+  document.querySelector(".subtotal").innerText = `Subtotal: $${subtotal}`;
+  document.querySelector(".taxes").innerText = `Tax: $${subtotal * 0.06}`;
+  document.querySelector(".total").innerText = `Total $${
+    subtotal * 0.06 + subtotal
+  }`;
+}
