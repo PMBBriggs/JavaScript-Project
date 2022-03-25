@@ -273,9 +273,14 @@ function calculateTotal() {
   for (let i = 0; i < cartTotal.length; i++) {
     subtotal += cartTotal[i].price;
   }
-  document.querySelector(".subtotal").innerText = `Subtotal: $${subtotal}`;
-  document.querySelector(".taxes").innerText = `Tax: $${subtotal * 0.06}`;
-  document.querySelector(".total").innerText = `Total $${
-    subtotal * 0.06 + subtotal
-  }`;
+  document.querySelector(
+    ".subtotal"
+  ).innerText = `Subtotal: $${subtotal.toFixed(2)}`;
+  document.querySelector(".taxes").innerText = `Tax: $${(
+    subtotal * 0.06
+  ).toFixed(2)}`;
+  document.querySelector(".total").innerText = `Total $${(
+    subtotal * 0.06 +
+    subtotal
+  ).toFixed(2)}`;
 }
