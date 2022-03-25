@@ -246,7 +246,7 @@ btnPm.addEventListener("click", (event) => {
       break;
     }
   }
-
+});
 
 //cashGiven Receipt
 document.querySelector(".cashSubmit").addEventListener("click", (e) => {

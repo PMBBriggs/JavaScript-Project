@@ -6,7 +6,7 @@ body {
   background-image: linear-gradient(
     233deg,
     #5d8ca7 0%,
-    #ceb3c4 35%,
+    #ceb3c4 50%,
     #f5edde 100%
   );
   background-repeat: no-repeat;
@@ -122,15 +122,28 @@ header {
 /* } */
 
 p {
-  color: black;
-
+  color: #6b3b36;
   font-size: 25px;
+  margin: 0;
+}
+#coldbrewParagraph {
+  padding: 40px;
+}
+#chaiParagraph {
+  padding: 40px;
 }
 #ctheader {
+  margin-top: 10px;
   text-align: center;
 }
-#cbgeader {
+#cbheader {
   text-align: center;
+  margin-top: 10px;
+}
+.nutrition {
+  text-align: center;
+  color: #f9f9f9;
+  font-size: 15px;
 }
 /* main ppage featured items */
 #Coldbrew {
@@ -161,11 +174,12 @@ p {
   width: 70%;
   height: 90%;
   background-color: #ffffff;
-  border-radius: 20px;
+  border: #ada993 solid 2px;
+  border-radius: 40px;
   box-shadow: 0px 10px 20px #ada993;
   justify-content: center;
   align-items: center;
-  margin-left: 70px;
+  margin: 20px 50px 90px 90px;
 }
 
 .shoppingCart {
@@ -185,7 +199,7 @@ p {
 }
 
 .Action {
-  font-size: 14px;
+  font-size: 25px;
   font-family: "Open Sans";
   font-weight: 600;
   color: #e44c4c;
@@ -246,6 +260,11 @@ p {
   color: #202020;
   cursor: pointer;
 }
+button {
+  font-size: 20px;
+  border-radius: 12px;
+  margin-top: 5px;
+}
 .count {
   font-size: 20px;
   font-family: "Open Sans";
@@ -289,77 +308,12 @@ p {
 
 /* product images */
 
-.coldBrew img {
-  height: 100px;
-  width: 100px;
+.product img {
+  height: 300px;
+  width: 300px;
   border-radius: 50%;
 }
 
-.caramelLatte img {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-}
-
-.hotChocolate img {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-}
-
-.whiteHC img {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-}
-
-.chaiTea img {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-}
-
-.matchaTea img {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-}
-
-.bananaNut img {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-}
-
-.chocolateMuffin img {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-}
-
-.BaconEgg img {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-}
-
-.sausageEgg img {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-}
-
-.saltyBagel img {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-}
-
-.asiagoBagel img {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-}
 /* end of product images */
 
 .row {
@@ -387,15 +341,12 @@ p {
   padding: 0 16px;
 }
 .container {
-  background-color: #f2f2f2;
   padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
 }
 input[type="text"] {
   width: 100%;
   margin-bottom: 20px;
-  padding: 12px;
+  padding: 5px;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
@@ -437,7 +388,9 @@ span.price {
 } */
 
 .payOptions {
-  border: #202020 5px solid;
+  background-color: #f5edde;
+  border: #6b3b36 5px solid;
+  border-radius: 40px;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -445,33 +398,66 @@ span.price {
 .payMethodHeading {
   color: #202020;
 }
-
+.paymentMethodSubmit {
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+#givenAmount {
+  text-align: center;
+  width: 100px;
+}
 /* product container styling*/
 
 .coldBrew {
   display: flex;
-  flex-direction: row-reverse;
   margin-top: 15px;
   margin-bottom: 25px;
 }
 .caramelLatte {
   display: flex;
-  flex-direction: row-reverse;
-  margin-right: 130px;
+  margin-right: 90px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.matchaTea {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.chaiTea {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.bananaNut {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.chocolatemuffin {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.saltyBagel {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.asiagoBagel {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+sausageEgg {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.BaconEgg {
   margin-top: 25px;
   margin-bottom: 20px;
 }
 .whiteHC {
   display: flex;
-  flex-direction: row-reverse;
-  margin-right: 130px;
+  flex-direction: row;
   margin-top: 25px;
-  margin-bottom: 20px;
 }
 .hotChocolate {
   display: flex;
-  flex-direction: row-reverse;
-  margin-right: 130px;
   margin-top: 25px;
   margin-bottom: 20px;
 }
@@ -482,4 +468,14 @@ span.price {
   margin-left: 50px;
   width: 100%;
   padding: 15px;
+}
+
+.checkout {
+  font-size: 25px;
+  position: relative;
+  left: 80%;
+  border-radius: 30px;
+}
+
+@media only screen and (max-width: 600px) {
 }
