@@ -220,6 +220,7 @@ document.querySelector(".checkout").addEventListener("click", (event) => {
   document.querySelector(".mainPage").style.display = "none";
   document.querySelector(".cartItems").style.display = "none";
   document.querySelector(".shoppingCart").style.display = "none";
+  document.querySelector(".checkout").style.display = "none";
 });
 // *****when you choose the cash radio button it takes you to cash method form***
 
@@ -237,11 +238,13 @@ btnPm.addEventListener("click", (event) => {
         document.querySelector(".payOptions").style.display = "none";
         document.querySelector(".mainPage").style.display = "none";
         document.querySelector(".cartItems").style.display = "none";
+        document.querySelector(".checkout").style.display = "none";
       } else if (payMethodBtn.id === "cardMethod") {
         document.querySelector(".cardOption").style.display = "block";
         document.querySelector(".payOptions").style.display = "none";
         document.querySelector(".mainPage").style.display = "none";
         document.querySelector(".cartItems").style.display = "none";
+        document.querySelector(".checkout").style.display = "none";
       }
       break;
     }
@@ -256,6 +259,9 @@ document.querySelector(".cashSubmit").addEventListener("click", (e) => {
   document.querySelector(".cashGiven").style.display = "block";
   document.querySelector(".cardGiven").style.display = "none";
   document.querySelector(".cashOption").style.display = "none";
+  document.querySelector(".orderName").style.display = "none";
+  receiptCashGiven();
+
 });
 //cardGiven Receipt
 document.querySelector(".cardSubmit").addEventListener("click", (e) => {
@@ -265,6 +271,7 @@ document.querySelector(".cardSubmit").addEventListener("click", (e) => {
   document.querySelector(".cashGiven").style.display = "none";
   document.querySelector(".cardGiven").style.display = "block";
   document.querySelector(".cardOption").style.display = "none";
+  receiptCardGiven();
 });
 
 //removing all items from cart
@@ -294,4 +301,20 @@ function calculateTotal() {
     subtotal * 0.06 +
     subtotal
   ).toFixed(2)}`;
+  total =  subtotal * 0.06 + subtotal
+}
+
+
+var total = 0
+
+function receiptCashGiven (e) {
+  var givenAmount = document.querySelector("#givenAmount").value;
+  document.querySelector(".cashGiven").innerText = `Amount Given: $${givenAmount}`;
+  document.querySelector(".changeAmount").innerText = `Change: $${(givenAmount - total).toFixed(2)}`;
+}
+
+function receiptCardGiven (e) {
+  var orderName = document.querySelector("#fname").value;
+  document.querySelector(".cardGiven").innerText = `Amount Tendered: $${(total).toFixed(2)}`;
+  document.querySelector(".orderName").innerText = `Order Name: ${orderName}`
 }
