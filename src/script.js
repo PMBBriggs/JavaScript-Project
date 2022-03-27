@@ -197,7 +197,6 @@ function createCartItem(item) {
 
   <div class="about">
     <h3 class="title">${item.name}</h3>
-    <h4 class="subtitle">16oz.</h4>
   </div>
 
   <p class="quantity">
