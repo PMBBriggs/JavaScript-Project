@@ -261,7 +261,6 @@ document.querySelector(".cashSubmit").addEventListener("click", (e) => {
   document.querySelector(".cashOption").style.display = "none";
   document.querySelector(".orderName").style.display = "none";
   receiptCashGiven();
-
 });
 //cardGiven Receipt
 document.querySelector(".cardSubmit").addEventListener("click", (e) => {
@@ -301,20 +300,26 @@ function calculateTotal() {
     subtotal * 0.06 +
     subtotal
   ).toFixed(2)}`;
-  total =  subtotal * 0.06 + subtotal
+  total = subtotal * 0.06 + subtotal;
 }
 
+var total = 0;
 
-var total = 0
-
-function receiptCashGiven (e) {
+function receiptCashGiven(e) {
   var givenAmount = document.querySelector("#givenAmount").value;
-  document.querySelector(".cashGiven").innerText = `Amount Given: $${givenAmount}`;
-  document.querySelector(".changeAmount").innerText = `Change: $${(givenAmount - total).toFixed(2)}`;
+  document.querySelector(
+    ".cashGiven"
+  ).innerText = `Amount Given: $${givenAmount}`;
+  document.querySelector(".changeAmount").innerText = `Change: $${(
+    givenAmount - total
+  ).toFixed(2)}`;
 }
 
-function receiptCardGiven (e) {
-  var orderName = document.querySelector("#fname").value;
-  document.querySelector(".cardGiven").innerText = `Amount Tendered: $${(total).toFixed(2)}`;
-  document.querySelector(".orderName").innerText = `Order Name: ${orderName}`
+function receiptCardGiven(e) {
+  var orderName = document.querySelector("#cname").value;
+  document.querySelector(
+    ".cardGiven"
+  ).innerText = `Amount Tendered: $${total.toFixed(2)}`;
+  document.querySelector(".orderName").innerText = `Order Name: ${orderName}`;
+  document.querySelector(".changeAmount").style.display = "none";
 }
