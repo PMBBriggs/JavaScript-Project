@@ -1,3 +1,14 @@
+//When you click the font logo, it takes you back to main page
+//  document.querySelector(".fontLogo").addEventListener("click", (event) => {
+//   event.preventDefault();
+//   document.querySelector(".payOptions").style.display = "none";
+//   document.querySelector(".mainPage").style.display = "block";
+//   document.querySelector(".logoSection").style.display = "block";
+//   document.querySelector(".cartItems").style.display = "none";
+//   document.querySelector(".shoppingCart").style.display = "none";
+//   document.querySelector(".checkout").style.display = "none";
+// })
+
 document.querySelector("#coffeeDrpDown").addEventListener("click", (event) => {
   event.preventDefault();
   var containers = document.querySelectorAll(".container");
@@ -74,7 +85,6 @@ function addColdBrew() {
   };
   createCartItem(temp);
 }
-// on click executes coldBrew ( tie to add to cart button)
 
 function addCL() {
   var temp = {
@@ -191,20 +201,22 @@ var cart = [];
 function createCartItem(item) {
   var root = document.createElement("div");
   root.classList.add("cartItem");
-  root.innerHTML = `<div class=" ">
+  root.innerHTML = `<div class="imageAndTitle">
   <img src="${item.imagePath}" class="cartImage" />
-  </div>
-
+  
   <div class="about">
-    <h3 class="title">${item.name}</h3>
+  <h3 class="title">${item.name}</h3>
   </div>
-
+</div>
+<div class="qtyAndP>
   <p class="quantity">
     Quantity: ${item.quantity}
   </p>
   <div class="prices">
     <div class="amount">$${item.price}</div>
-  </div>`;
+  </div>
+</div>`;
+
 
   // adding items to page/cart
   document.querySelector(".cartItems").appendChild(root);

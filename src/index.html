@@ -5,17 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Espresso Yourself</title>
   </head>
   <body>
     <div class="logo">
-      <img src=".\assets\Espresso yourself full logo.png" alt="Espresso Yourself" />
+      <p class="fontLogo">Espresso Yourself</p>
+      <!-- <img src=".\assets\Espresso yourself full logo.png" alt="Espresso Yourself" /> -->
     </div>
     <header>
       <div class="topnav">
@@ -43,7 +42,7 @@
         </div>
         <div class="dropdown">
           <button class="dropbtn">
-            locations
+            Locations
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content container">
@@ -60,20 +59,20 @@
         </div>
         <div class="dropdown">
           <button class="dropbtn" onClick="showCartContainer(event)">
-            Cart
+            <i style="font-size:24px" class="fa">&#xf07a;</i>
           </button>
         </div>
       </div>
     </header>
+    <div class="logoSection container">
+        <img src="./assets/Espresso yourself full logo.png" alt="espresso yourself" id="EYLogo">
+        <img src="./assets/3 coffees-unsplash.jpg" alt="3 esspressos" id="EYPicture">
+    </div>
     <div class="mainPage container">
       <div id="Coldbrew">
-        <img
-          src="./assets/Cold brew 2.jpg"
-          alt="Coldbrew Coffee"
-          id="coldbrewPNG"
-        />
+        <img src="./assets/Cold brew 2.jpg" alt="Coldbrew Coffee" id="coldbrewPNG"/>
         <div id ="coldBrewInfo">
-          <p id="cbheader">VANILLA SWEET CREAM COLD BREW</p>
+          <p id="cbheader">Vanilla Sweet Cream Cold Brew</p>
           <p id="coldbrewParagraph">
             Our slow-steeped custom blend of Cold Brew coffee accented with vanilla and topped with a delicate float of house-made vanilla sweet cream that cascades throughout the cup. It's over-the-top and super-smooth.
             <p class="nutrition">
@@ -84,7 +83,7 @@
       </div>
       <div id="Chaitea">
         <div id = "chaiTeaInfo">
-          <p id="ctheader">CHAI TEA LATTE</p>
+          <p id="ctheader">Chai Tea Latte</p>
           <p id="chaiParagraph">
             Black tea infused with cinnamon, clove and other warming spices is combined with steamed milk and topped with foam for the perfect balance of sweet and spicy. An iconic chai cup.
             <p class="nutrition" >
@@ -92,7 +91,9 @@
             </p>
           </p>
         </div>
-        <img src="./assets/Chaitea.png" alt="Chaitea" id="chaiteaPNG" />
+        <div class="chaiteaPNGcontainer">
+          <img src="./assets/Chaitea.png" alt="Chaitea" id="chaiteaPNG" />
+        </div>
         <!-- create on-click to take user to different page -->
       </div>
     </div>
@@ -233,19 +234,9 @@
       <div class = "payOptions hidden">
         <form>
           <h1 class="payMethodHeading">Payment Method:</h1>
-          <input
-          type="radio"
-          id="cashMethod"
-          name="paymentMethod"
-          value="Cash"
-          />
+          <input type="radio" id="cashMethod" name="paymentMethod" value="Cash"/>
           <label for="cashMethod">Cash</label><br />
-          <input
-          type="radio"
-          id="cardMethod"
-          name="paymentMethod"
-          value="Card"
-          />
+          <input type="radio" id="cardMethod" name="paymentMethod" value="Card"/>
           <label for="cardMethod">Card</label><br />
           <br />
           <input class="paymentMethodSubmit" type="submit" value="Submit" />
@@ -255,11 +246,7 @@
         <form class="cashForm" id="cashForm">
           <label for="givenAmount">Amount Given</label>
           <input type="text" id="givenAmount" name="given" /><br /><br />
-          <input
-          class="cashSubmit"
-          type="submit"
-          value="Continue to checkout"
-          />
+          <input class="cashSubmit"type="submit" value="Continue to checkout"/>
         </form>
       </div>
       <div class="cardOption hidden">
@@ -290,23 +277,11 @@
                       placeholder="john@example.com"
                       />
                       <label for="adr"
-                      ><i class="fa fa-address-card-o"></i> Address</label
-                      >
-                      <input
-                        type="text"
-                        id="adr"
-                        name="address"
-                        placeholder="542 W. 15th Street"
-                        />
+                      ><i class="fa fa-address-card-o"></i> Address</label>
+                      <input type="text" id="adr" name="address" placeholder="542 W. 15th Street"/>
                         <label for="city"
-                        ><i class="fa fa-institution"></i> City</label
-                        >
-                        <input
-                        type="text"
-                        id="city"
-                        name="city"
-                        placeholder="New York"
-                        />
+                        ><i class="fa fa-institution"></i> City</label>
+                        <input type="text" id="city" name="city" placeholder="New York"/>
                         <div class="row">
                           <div class="col-50">
                             <label for="state">State</label>
@@ -338,19 +313,9 @@
                         <i class="fa fa-cc-discover" style="color: orange"></i>
                       </div>
                       <label for="cname">Name on Card</label>
-                      <input
-                      type="text"
-                      id="cname"
-                      name="cardname"
-                      placeholder="John More Doe"
-                      />
+                      <input type="text" id="cname" name="cardname" placeholder="John More Doe"/>
                       <label for="ccnum">Credit card number</label>
-                      <input
-                      type="text"
-                      id="ccnum"
-                      name="cardnumber"
-                      placeholder="1111-2222-3333-4444"
-                      />
+                      <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444"/>
                       <label for="expmonth">Exp Month</label>
                       <input
                         type="text"
@@ -361,21 +326,11 @@
                         <div class="row">
                           <div class="col-50">
                             <label for="expyear">Exp Year</label>
-                            <input
-                            type="text"
-                            id="expyear"
-                            name="expyear"
-                            placeholder="2018"
-                            />
+                            <input type="text" id="expyear" name="expyear" placeholder="2018"/>
                           </div>
                           <div class="col-50">
                             <label for="cvv">CVV</label>
-                          <input
-                          type="text"
-                          id="cvv"
-                          name="cvv"
-                          placeholder="352"
-                          />
+                          <input type="text" id="cvv" name="cvv"placeholder="352"/>
                         </div>
                       </div>
                     </div>
@@ -384,12 +339,7 @@
                     <input type="checkbox" checked="checked" name="sameadr" />
                     Shipping address same as billing
                   </label>
-                  <input
-                    class="cardSubmit"
-                    type="submit"
-                    value="Continue to checkout"
-                    class="btn"
-                    />
+                  <input class="cardSubmit" type="submit" value="Continue to checkout" class="btn"/>
                   </form>
               </div>
             </div>
@@ -416,13 +366,9 @@
         </div>
         
       </div>
-      <!-- cartDiv -->
       <button class="checkout">Checkout</button>
     </div>
    
-
-
-    <!-- </div> -->
     
 
     <script src="script.js"></script>
